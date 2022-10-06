@@ -1,0 +1,212 @@
+body{
+	background-color: #eee;
+	color: #333;
+}
+a{
+	text-decoration: none;/*Quita la decoracion de Link*/
+	color: black;/*El color de es Negro*/
+}
+a:hover{/*Al pasar el mouse cambia de color y subraya*/
+	text-decoration: underline;
+	color: darkblue;
+}
+img{
+	max-width: 100%;
+}
+#navbar {
+	background-color: #000; /*Cambia el Color del fondo Nav*/
+	position: absolute;/*Que se ubique solo en una posicion definida*/
+	left: 0;/*Para que no se mueban del lugar que corresponde*/
+	top: 0;/*Para que se quede pegado en la parte superior izquierda*/
+	display: block;/*para que se bloquee hay*/
+	width: 100%;/*Mantenga el 100% de ancho en cualquier dispositivo*/ 
+	z-index: 100;/*Posicionar Elementos uno Sobre Otro Un Elemento y Sus Desendientes */
+  overflow: hidden; /* Oculta Los Espacios que Quedaran en la Lista */
+
+}
+
+#navbar ul {
+	list-style: none;/*Tipo de estilo a la lista Ninguno*/
+	margin: 0; /* Margen*/
+	padding: 0; /* Espacio Entre los Otros Elementos */
+	
+}
+#navbar li{
+  float: left;
+}
+
+#navbar li a {
+	padding: 15px;/*Separa cada item a los lados 10 px y arriba y abajo 5 px*/
+	display: inline-block;
+	text-decoration: none;/*Que no tenga Decoracion de nada*/
+	font-size: 1em;/*El Tamaño de la Fuente*/
+	text-align: center; /*Que el contenido quede al centro del bloque */
+  color: aliceblue;/*Se Asigna un Color al texto */
+
+}
+
+#navbar li.active a{/*Creo Una Subclase*/
+color:red;
+}
+
+#navbar li {
+  float: left;/*Que Todos Se Alinien Hacia La Derecha*/
+}
+
+#navbar li a:hover{ /*Cuando se pasa el mouse por encima de la lista cambiara de color*/
+	background-color:coral ;/*El Fondo de Color Cambia*/
+	/*font-size: 1em;/*Tamaño de Fonodo Aumenta*/
+	color: black;/*Cambia de color*/
+}
+
+
+form{/*Estilo del formulario*/
+  max-width: 750px; /*Ancho maximo del formulario*/
+  border: 1px solid #ddd;/*Borde del formulario*/
+  border-radius: 20px;/*Radio del borde del formulario*/ 
+  margin: 0 auto;/*Maregen del formulario*/
+}
+
+form div{ /*Estilo del formulario en la parte del DIV*/
+  padding: 15px;/*Margen del DIV*/
+} 
+input {/*Estilo de input*/
+  width: 90%;/*Ancho de cada uno*/
+  display: block;/*Hace como el salto de linea del texto al cuadro de texto*/
+}
+
+button{
+  width: 90%;
+  height: 50%;
+  padding: 15px;
+}
+
+.myicono{
+	color: aliceblue;/*Asigna un color a la clase del icono el cual es igual al de la lista*/
+	font-size: 1.5em; /*Se le asigna un valor a  el tamaño del Icono*/
+	padding: 10px;/*Asignar un Marguen en todos los lados de 10 pixeles*/
+	display: none; /*Lo desaparecemos*/
+  text-align: right;
+}
+
+.lista-sm {
+  display: block;
+}
+
+#content {
+	max-width: 1180; /* Se asigna un ancho maximo de 1180 pixiles*/
+	position: relative;/*Se le asigna un posicion relativa al contenido de pagina */
+	top: 60px;/*Que la parte superior tenga  40 Pixeles de espacio*/
+	margin: 0 auto;/*Se asigna una margen de Cero*/ 
+	background-color: #fff;
+	padding: 2%;
+
+}
+#content header{
+	/*border: 1px solid;*//*Borde de todo rl contenido*/
+	height: 120px;/* Alto Definido */
+	padding: 10px 20px;/*Se asigna un Marguen al Header*/
+  background-color: #ddd;/*Se asigna un color de fondo al header*/
+  border-radius: 1em;/*Asignamos un borde con un Radio*/
+  }
+
+  #principal {
+  	/*border: 1px solid;/*Se agsigna un borde solido*/
+  	width: 40%;/*Se asigna el espacio de la seccion*/
+  	float: left;/*Hacemos que pase al lado derecho*/
+    padding: 5px;/*Damos un margen de 3 pixeles*/
+  }
+  #secundario {
+	/*border: 1px solid;/*Se agsigna un borde solido*/
+	width: 40%;/*Se asigna el espacio de la seccion*/
+	float: left;/*Hacemos que pase al lado derecho*/
+	padding: 5px;/*Damos un margen de 3 pixeles*/
+  }
+  #content aside{
+  	/*border: 1px solid;/*Se agsigna un borde solido*/
+  	width: 20%;/*Se asigna el espacio de la seccion*/
+  	float: left;/*Hacemos que pase al lado derecho*/
+  	padding: 5px;/*Damos un margen de 3 pixeles*/
+  }
+  #content footer{
+  	clear: both;/*Borrado de datos*/
+  	width: 100%;/*Ancho del 100%*/
+  	background-color: #ddd;/*Asignamos Un Color de Fondo*/
+  	text-align: center;
+    border: 1px solid;/*Asignamos Un tamaño de borde y tipo de borde solido*/
+  	/*border-radius: 1em;/*Asignamos un borde con un Radio*/
+  	height: 100px;/*Darle mas Tamaño Al pie de pagina*/ 
+  	padding: 25px;/*Espacio en todos los lados de 25 pixeles*/
+  }
+  /*Se quitan los bordes para darle mas forma a las secciones*/
+/*Media QUERY sirve para cambios dinamicos apartir de CSS3*/
+  @media screen and (max-width:820px ){/*Se va a usar cuando hay un maximo de 820 en el ancho de la pantalla*/
+  	#content{
+  		padding: 0;/*Margen de cero*/
+  		max-width: 100%;/* En el contenido se el 100% */
+  	}
+    #content header{
+    	padding: 0;/* Dentro del tamaño de pantalla definido se define cero de margen*/
+    	border-radius: 0;/*El radio del borde queda en cero*/
+    } 
+    #principal {
+    	padding: 3%;/*Margen de 3%*/
+    	width: 45%;/*Ancho Maximo de 45%*/
+    }
+    #secundario{
+    	float: right;/*Que aparezca a la derecha*/
+    	padding: 3%;/*Margen de 3%*/
+    	width: 45%;/*Ancho de 45%*/
+    }
+    #content aside{
+    	clear: both;/*Borre todo*/
+    	padding: 5%;/*Marge de 5%*/
+    	width: 100%;/*Ancho del 100 porciento del pantalla*/
+    }
+    #content footer{
+    	width: 100%;/* Se le da un ancho del 100%*/
+    	padding: 0;/*Asignamos Margen de cero cuando llegue a 820 de tamaño de pantalla*/
+    }
+
+  }
+  @media screen and (max-width:600px ){/*Se va a usar cuando hay un maximo de 820 en el ancho de la pantalla*/
+  	#content{
+  	width: auto;/*Ancho Automatico*/
+    } 
+    #principal {
+    	width: auto;/*Ancho Maximo automatico*/
+    	float: none;/*Ninguno*/
+    	margin: 0px;/*Margin cero pixeles*/
+    }
+    #secundario{
+        width: auto;/*Ancho Maximo automatico*/
+        float: none;/*Ninguno*/
+    	margin: 0px;/*Margin cero pixeles*/
+    }
+    #content aside{
+    	padding: 0;/*Margen cero*/
+    	width: auto; /*Ancho Automatico*/
+    }
+    #content footer{
+    	width: auto;/*Que el ancho sea automatico*/
+     }
+     .lista-sm{
+     	display: none;}
+     }
+     #navbar li{
+     	float: none;/*Ninguno*/
+     	display: block;/*Movimiento Aleatorio Bloqueado*/
+     }
+     #navbar li a{
+     	padding: 5px;/*Marguen de 5 pixeles*/
+     	text-align: left;/*Aliniamos texto hacia la Izquuierda*/
+     	width: 100%;/*Ancho de 100%*/
+     }
+    /*Las clases se llaman co incono*/
+    .myicono{
+    	display: block;
+    	text-align: right;/*El texto se alinea a la derecha*/
+    }
+
+  }
+
